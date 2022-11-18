@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You still opened it!</title>
+  </head>
+  <style>
+    html,
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      text-align: center;
+    }
+  </style>
+  <body>
+    <h1>I told you to not open it, but you still did.</h1>
+    <h2>It's okay you can signup for my AWS course now</h3>
+    <p>
+        Redirecting you in <span id="counter">5</span> seconds to
+      <a href="https://learnaws.io">learnaws.io</a>
+    </p>
+    <script>
+      const counter = document.getElementById('counter')
+      setTimeout(() => {
+        window.location.href = "https://learnaws.io";
+      }, 5000);
+      setInterval(()=>{
+        counter.innerText = --counter.innerText
+      }, 1000)
+    </script>
+  </body>
+</html>
